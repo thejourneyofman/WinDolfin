@@ -1,5 +1,3 @@
-﻿./configure --with-cc=gcc --with-cxx=g++ --with-fc=gfortran --download-mpich --download-fblaslapack
-
 # WinDolfin: FEniCS Built From Source with Visual Studio 2019 -- No requirements for Windows subsystem (Linux)
 
 ---
@@ -39,8 +37,7 @@ and the building instructions from source are available at
 #### -- boost (1.75.0)
 
 ### Packages Integrated
-#### -- Dolfin (DOLFIN_VERSION  "2019.2.0.dev0" )
-#### -- Dolfin (GIT_VERSION "b495043d6b3914383eb939ea6c6794442080a3a5")
+#### -- Dolfin ("2019.2.0.dev0" )
 #### -- zlib (1.2.11)
 #### -- Eigen (3.3.9)
 #### -- FFC (latest)
