@@ -1,0 +1,1689 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="adaptivity">
+      <UniqueIdentifier>{bfa37b12-8f47-42b2-b235-dd6b0ceb71b6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ale">
+      <UniqueIdentifier>{c7e6b0c6-e8b2-4393-b9c5-a0162130b02b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="common">
+      <UniqueIdentifier>{e5e7c6b2-2691-44d3-912d-93f1296b2922}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="examples">
+      <UniqueIdentifier>{007f53e0-89f1-44b1-87fa-84b9c8b3dc80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="fem">
+      <UniqueIdentifier>{af7ec4ac-28a3-4692-9115-88db9f15b2ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ffc">
+      <UniqueIdentifier>{3051dbc7-99b4-452b-8285-d0fec2e18220}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="generation">
+      <UniqueIdentifier>{e6d1d7f3-1f3f-40bb-8944-506257dbd773}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="geometry">
+      <UniqueIdentifier>{5516263b-6b13-4345-8438-b73cf367ea09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="graph">
+      <UniqueIdentifier>{e4b5a23d-f899-490d-9b1a-fbaadab428d3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="io">
+      <UniqueIdentifier>{ef244a43-1171-4785-aadf-63d975e94f7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="la">
+      <UniqueIdentifier>{1579489a-fed3-40c1-a721-bc4415051002}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="log">
+      <UniqueIdentifier>{e746c263-ffe9-4703-a013-f4432aa1475c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="math">
+      <UniqueIdentifier>{f0e1998c-257d-4de8-af6e-befe6ecbc170}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="mesh">
+      <UniqueIdentifier>{1810a233-ce55-4e48-bff0-a16f80ca03aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="multistage">
+      <UniqueIdentifier>{3bcece56-27c2-4986-91b0-1dc1f751e496}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="nls">
+      <UniqueIdentifier>{5a2e9626-8452-4af3-8571-334e3add283c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="parameter">
+      <UniqueIdentifier>{cd34b43b-dc79-4794-a2fa-b15f1292635d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="refinement">
+      <UniqueIdentifier>{3d2cf8ec-ccba-4efc-bf94-16ea6fe0ddd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ts">
+      <UniqueIdentifier>{22f73249-3181-4c25-8fbc-41b6ac6664aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="examples\navier-stokes">
+      <UniqueIdentifier>{b49e1caa-1f52-4a78-a02a-9b37c21d9704}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="function">
+      <UniqueIdentifier>{b14e7b4b-6e05-4e0a-b2c5-cda544efa50c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="examples\neumann-poisson">
+      <UniqueIdentifier>{97bb3652-af21-4f7f-abe2-9b0f36a9d579}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ale\HarmonicSmoothing.cpp">
+      <Filter>ale</Filter>
+    </ClCompile>
+    <ClCompile Include="ale\ALE.cpp">
+      <Filter>ale</Filter>
+    </ClCompile>
+    <ClCompile Include="ale\MeshDisplacement.cpp">
+      <Filter>ale</Filter>
+    </ClCompile>
+    <ClCompile Include="adaptivity\adapt.cpp">
+      <Filter>adaptivity</Filter>
+    </ClCompile>
+    <ClCompile Include="adaptivity\AdaptiveLinearVariationalSolver.cpp">
+      <Filter>adaptivity</Filter>
+    </ClCompile>
+    <ClCompile Include="adaptivity\AdaptiveNonlinearVariationalSolver.cpp">
+      <Filter>adaptivity</Filter>
+    </ClCompile>
+    <ClCompile Include="adaptivity\adaptivesolve.cpp">
+      <Filter>adaptivity</Filter>
+    </ClCompile>
+    <ClCompile Include="adaptivity\ErrorControl.cpp">
+      <Filter>adaptivity</Filter>
+    </ClCompile>
+    <ClCompile Include="adaptivity\Extrapolation.cpp">
+      <Filter>adaptivity</Filter>
+    </ClCompile>
+    <ClCompile Include="adaptivity\GenericAdaptiveVariationalSolver.cpp">
+      <Filter>adaptivity</Filter>
+    </ClCompile>
+    <ClCompile Include="adaptivity\GoalFunctional.cpp">
+      <Filter>adaptivity</Filter>
+    </ClCompile>
+    <ClCompile Include="adaptivity\marking.cpp">
+      <Filter>adaptivity</Filter>
+    </ClCompile>
+    <ClCompile Include="adaptivity\TimeSeries.cpp">
+      <Filter>adaptivity</Filter>
+    </ClCompile>
+    <ClCompile Include="common\defines.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\init.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\MPI.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\SubSystemsManager.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\Timer.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\timing.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\UniqueIdGenerator.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\utils.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="common\Variable.cpp">
+      <Filter>common</Filter>
+    </ClCompile>
+    <ClCompile Include="fem\MixedLinearVariationalProblem.cpp">
+      <Filter>fem</Filter>
+    </ClCompile>
+    <ClCompile Include="fem\assemble.cpp">
+      <Filter>fem</Filter>
+    </ClCompile>
+    <ClCompile Include="fem\assemble_local.cpp">
+      <Filter>fem</Filter>
+    </ClCompile>
+    <ClCompile Include="fem\Assembler.cpp">
+      <Filter>fem</Filter>
+    </ClCompile>
+    <ClCompile Include="fem\AssemblerBase.cpp">
+      <Filter>fem</Filter>
+    </ClCompile>
+    <ClCompile Include="fem\DirichletBC.cpp">
+      <Filter>fem</Filter>
+    </ClCompile>
+    <ClCompile Include="fem\DiscreteOperators.cpp">
+      <Filter>fem</Filter>
+    </ClCompile>
+    <ClCompile Include="fem\DofMap.cpp">
+      <Filter>fem</Filter>
+    </ClCompile>
+    <ClCompile Include="fem\DofMapBuilder.cpp">
+      <Filter>fem</Filter>
+    </ClCompile>
+    <ClCompile Include="fem\Equation.cpp">
+      <Filter>fem</Filter>
+    </ClCompile>
+    <ClCompile Include="fem\fem_utils.cpp">
+      <Filter>fem</Filter>
+    </ClCompile>
+    <ClCompile Include="fem\FiniteElement.cpp">
+      <Filter>fem</Filter>
+    </ClCompile>
+    <ClCompile Include="fem\Form.cpp">
+      <Filter>fem</Filter>
+    </ClCompile>
+    <ClCompile Include="fem\LinearTimeDependentProblem.cpp">
+      <Filter>fem</Filter>
+    </ClCompile>
+    <ClCompile Include="fem\LinearVariationalProblem.cpp">
+      <Filter>fem</Filter>
+    </ClCompile>
+    <ClCompile Include="fem\LinearVariationalSolver.cpp">
+      <Filter>fem</Filter>
+    </ClCompile>
+    <ClCompile Include="fem\LocalAssembler.cpp">
+      <Filter>fem</Filter>
+    </ClCompile>
+    <ClCompile Include="fem\LocalSolver.cpp">
+      <Filter>fem</Filter>
+    </ClCompile>
+    <ClCompile Include="fem\MixedAssembler.cpp">
+      <Filter>fem</Filter>
+    </ClCompile>
+    <ClCompile Include="fem\MixedLinearVariationalSolver.cpp">
+      <Filter>fem</Filter>
+    </ClCompile>
+    <ClCompile Include="fem\MixedNonlinearVariationalProblem.cpp">
+      <Filter>fem</Filter>
+    </ClCompile>
+    <ClCompile Include="fem\MixedNonlinearVariationalSolver.cpp">
+      <Filter>fem</Filter>
+    </ClCompile>
+    <ClCompile Include="fem\MultiMeshAssembler.cpp">
+      <Filter>fem</Filter>
+    </ClCompile>
+    <ClCompile Include="fem\MultiMeshDirichletBC.cpp">
+      <Filter>fem</Filter>
+    </ClCompile>
+    <ClCompile Include="fem\MultiMeshDofMap.cpp">
+      <Filter>fem</Filter>
+    </ClCompile>
+    <ClCompile Include="fem\MultiMeshForm.cpp">
+      <Filter>fem</Filter>
+    </ClCompile>
+    <ClCompile Include="fem\NonlinearVariationalProblem.cpp">
+      <Filter>fem</Filter>
+    </ClCompile>
+    <ClCompile Include="fem\NonlinearVariationalSolver.cpp">
+      <Filter>fem</Filter>
+    </ClCompile>
+    <ClCompile Include="fem\PETScDMCollection.cpp">
+      <Filter>fem</Filter>
+    </ClCompile>
+    <ClCompile Include="fem\PointSource.cpp">
+      <Filter>fem</Filter>
+    </ClCompile>
+    <ClCompile Include="fem\solve.cpp">
+      <Filter>fem</Filter>
+    </ClCompile>
+    <ClCompile Include="la\SparsityPattern.cpp">
+      <Filter>fem</Filter>
+    </ClCompile>
+    <ClCompile Include="fem\SystemAssembler.cpp">
+      <Filter>fem</Filter>
+    </ClCompile>
+    <ClCompile Include="fem\UFC.cpp">
+      <Filter>fem</Filter>
+    </ClCompile>
+    <ClCompile Include="function\assign.cpp">
+      <Filter>function</Filter>
+    </ClCompile>
+    <ClCompile Include="function\CoefficientAssigner.cpp">
+      <Filter>function</Filter>
+    </ClCompile>
+    <ClCompile Include="function\Constant.cpp">
+      <Filter>function</Filter>
+    </ClCompile>
+    <ClCompile Include="function\Expression.cpp">
+      <Filter>function</Filter>
+    </ClCompile>
+    <ClCompile Include="function\Function.cpp">
+      <Filter>function</Filter>
+    </ClCompile>
+    <ClCompile Include="function\FunctionAssigner.cpp">
+      <Filter>function</Filter>
+    </ClCompile>
+    <ClCompile Include="function\FunctionAXPY.cpp">
+      <Filter>function</Filter>
+    </ClCompile>
+    <ClCompile Include="function\FunctionSpace.cpp">
+      <Filter>function</Filter>
+    </ClCompile>
+    <ClCompile Include="function\GenericFunction.cpp">
+      <Filter>function</Filter>
+    </ClCompile>
+    <ClCompile Include="function\LagrangeInterpolator.cpp">
+      <Filter>function</Filter>
+    </ClCompile>
+    <ClCompile Include="function\MultiMeshCoefficientAssigner.cpp">
+      <Filter>function</Filter>
+    </ClCompile>
+    <ClCompile Include="function\MultiMeshFunction.cpp">
+      <Filter>function</Filter>
+    </ClCompile>
+    <ClCompile Include="function\MultiMeshFunctionSpace.cpp">
+      <Filter>function</Filter>
+    </ClCompile>
+    <ClCompile Include="function\MultiMeshSubSpace.cpp">
+      <Filter>function</Filter>
+    </ClCompile>
+    <ClCompile Include="function\SpecialFacetFunction.cpp">
+      <Filter>function</Filter>
+    </ClCompile>
+    <ClCompile Include="function\SpecialFunctions.cpp">
+      <Filter>function</Filter>
+    </ClCompile>
+    <ClCompile Include="generation\BoxMesh.cpp">
+      <Filter>generation</Filter>
+    </ClCompile>
+    <ClCompile Include="generation\IntervalMesh.cpp">
+      <Filter>generation</Filter>
+    </ClCompile>
+    <ClCompile Include="generation\RectangleMesh.cpp">
+      <Filter>generation</Filter>
+    </ClCompile>
+    <ClCompile Include="generation\SphericalShellMesh.cpp">
+      <Filter>generation</Filter>
+    </ClCompile>
+    <ClCompile Include="generation\UnitDiscMesh.cpp">
+      <Filter>generation</Filter>
+    </ClCompile>
+    <ClCompile Include="generation\UnitTetrahedronMesh.cpp">
+      <Filter>generation</Filter>
+    </ClCompile>
+    <ClCompile Include="generation\UnitTriangleMesh.cpp">
+      <Filter>generation</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\BoundingBoxTree.cpp">
+      <Filter>geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\CollisionPredicates.cpp">
+      <Filter>geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\ConvexTriangulation.cpp">
+      <Filter>geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GenericBoundingBoxTree.cpp">
+      <Filter>geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryDebugging.cpp">
+      <Filter>geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\GeometryPredicates.cpp">
+      <Filter>geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\intersect.cpp">
+      <Filter>geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\IntersectionConstruction.cpp">
+      <Filter>geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\MeshPointIntersection.cpp">
+      <Filter>geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\Point.cpp">
+      <Filter>geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\predicates.cpp">
+      <Filter>geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="geometry\SimplexQuadrature.cpp">
+      <Filter>geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="graph\BoostGraphOrdering.cpp">
+      <Filter>graph</Filter>
+    </ClCompile>
+    <ClCompile Include="graph\GraphBuilder.cpp">
+      <Filter>graph</Filter>
+    </ClCompile>
+    <ClCompile Include="graph\GraphColoring.cpp">
+      <Filter>graph</Filter>
+    </ClCompile>
+    <ClCompile Include="graph\ParMETIS.cpp">
+      <Filter>graph</Filter>
+    </ClCompile>
+    <ClCompile Include="graph\SCOTCH.cpp">
+      <Filter>graph</Filter>
+    </ClCompile>
+    <ClCompile Include="graph\ZoltanInterface.cpp">
+      <Filter>graph</Filter>
+    </ClCompile>
+    <ClCompile Include="io\base64.cpp">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\File.cpp">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\GenericFile.cpp">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\HDF5Attribute.cpp">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\HDF5File.cpp">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\HDF5Interface.cpp">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\HDF5Utility.cpp">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\pugixml.cpp">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\RAWFile.cpp">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\SVGFile.cpp">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\VTKFile.cpp">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\VTKWriter.cpp">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\X3DFile.cpp">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\X3DOM.cpp">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\XDMFFile.cpp">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\XMLFile.cpp">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\XMLFunctionData.cpp">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\XMLMesh.cpp">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\XMLParameters.cpp">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\XMLTable.cpp">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\xmlutils.cpp">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\XMLVector.cpp">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="io\XYZFile.cpp">
+      <Filter>io</Filter>
+    </ClCompile>
+    <ClCompile Include="la\Amesos2LUSolver.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\BelosKrylovSolver.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\BlockMatrix.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\BlockVector.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\CoordinateMatrix.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\DefaultFactory.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\EigenFactory.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\EigenKrylovSolver.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\EigenLUSolver.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\EigenMatrix.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\EigenVector.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\GenericLinearSolver.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\GenericMatrix.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\Ifpack2Preconditioner.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\IndexMap.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\KrylovSolver.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\LinearOperator.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\LinearSolver.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\MueluPreconditioner.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\PETScBaseMatrix.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\PETScFactory.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\PETScKrylovSolver.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\PETScLinearOperator.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\PETScLUSolver.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\PETScMatrix.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\PETScNestMatrix.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\PETScObject.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\PETScOptions.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\PETScPreconditioner.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\PETScVector.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\SLEPcEigenSolver.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="fem\SparsityPatternBuilder.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\TensorLayout.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\test_nullspace.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\TpetraFactory.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\TpetraMatrix.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\TpetraVector.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\TrilinosParameters.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\VectorSpaceBasis.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="log\Event.cpp">
+      <Filter>log</Filter>
+    </ClCompile>
+    <ClCompile Include="log\log.cpp">
+      <Filter>log</Filter>
+    </ClCompile>
+    <ClCompile Include="log\Logger.cpp">
+      <Filter>log</Filter>
+    </ClCompile>
+    <ClCompile Include="log\LogManager.cpp">
+      <Filter>log</Filter>
+    </ClCompile>
+    <ClCompile Include="log\LogStream.cpp">
+      <Filter>log</Filter>
+    </ClCompile>
+    <ClCompile Include="log\Progress.cpp">
+      <Filter>log</Filter>
+    </ClCompile>
+    <ClCompile Include="log\Table.cpp">
+      <Filter>log</Filter>
+    </ClCompile>
+    <ClCompile Include="math\basic.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="math\Lagrange.cpp">
+      <Filter>math</Filter>
+    </ClCompile>
+    <ClCompile Include="math\Legendre.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\BoundaryComputation.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\BoundaryMesh.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\Cell.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\CellType.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\DistributedMeshTools.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\DynamicMeshEditor.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\Edge.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\Face.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\Facet.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\FacetCell.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\HexahedronCell.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\IntervalCell.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\LocalMeshData.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\Mesh.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\MeshColoring.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\MeshConnectivity.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\MeshData.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\MeshDomains.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\MeshEditor.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\MeshEntity.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\MeshFunction.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\MeshGeometry.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\MeshHierarchy.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\MeshOrdering.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\MeshPartitioning.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\MeshQuality.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\MeshRenumbering.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\MeshSmoothing.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\MeshTopology.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\MeshTransformation.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\MeshView.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\MultiMesh.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\PeriodicBoundaryComputation.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\PointCell.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\QuadrilateralCell.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\SubDomain.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\SubMesh.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\TetrahedronCell.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\TopologyComputation.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="mesh\TriangleCell.cpp">
+      <Filter>mesh</Filter>
+    </ClCompile>
+    <ClCompile Include="multistage\MultiStageScheme.cpp">
+      <Filter>multistage</Filter>
+    </ClCompile>
+    <ClCompile Include="multistage\PointIntegralSolver.cpp">
+      <Filter>multistage</Filter>
+    </ClCompile>
+    <ClCompile Include="multistage\RKSolver.cpp">
+      <Filter>multistage</Filter>
+    </ClCompile>
+    <ClCompile Include="nls\NewtonSolver.cpp">
+      <Filter>nls</Filter>
+    </ClCompile>
+    <ClCompile Include="nls\PETScSNESSolver.cpp">
+      <Filter>nls</Filter>
+    </ClCompile>
+    <ClCompile Include="nls\PETScTAOSolver.cpp">
+      <Filter>nls</Filter>
+    </ClCompile>
+    <ClCompile Include="nls\TAOLinearBoundSolver.cpp">
+      <Filter>nls</Filter>
+    </ClCompile>
+    <ClCompile Include="parameter\GlobalParameters.cpp">
+      <Filter>parameter</Filter>
+    </ClCompile>
+    <ClCompile Include="parameter\Parameter.cpp">
+      <Filter>parameter</Filter>
+    </ClCompile>
+    <ClCompile Include="parameter\Parameters.cpp">
+      <Filter>parameter</Filter>
+    </ClCompile>
+    <ClCompile Include="refinement\BisectionRefinement1D.cpp">
+      <Filter>refinement</Filter>
+    </ClCompile>
+    <ClCompile Include="refinement\LocalMeshCoarsening.cpp">
+      <Filter>refinement</Filter>
+    </ClCompile>
+    <ClCompile Include="refinement\ParallelRefinement.cpp">
+      <Filter>refinement</Filter>
+    </ClCompile>
+    <ClCompile Include="refinement\PlazaRefinementND.cpp">
+      <Filter>refinement</Filter>
+    </ClCompile>
+    <ClCompile Include="refinement\refine.cpp">
+      <Filter>refinement</Filter>
+    </ClCompile>
+    <ClCompile Include="refinement\RegularCutRefinement.cpp">
+      <Filter>refinement</Filter>
+    </ClCompile>
+    <ClCompile Include="ts\CVode.cpp">
+      <Filter>ts</Filter>
+    </ClCompile>
+    <ClCompile Include="la\LUSolver.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+    <ClCompile Include="la\solve.cpp">
+      <Filter>la</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="dolfin.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ale\MeshDisplacement.h">
+      <Filter>ale</Filter>
+    </ClInclude>
+    <ClInclude Include="ale\HarmonicSmoothing.h">
+      <Filter>ale</Filter>
+    </ClInclude>
+    <ClInclude Include="ale\dolfin_ale.h">
+      <Filter>ale</Filter>
+    </ClInclude>
+    <ClInclude Include="ale\ALE.h">
+      <Filter>ale</Filter>
+    </ClInclude>
+    <ClInclude Include="adaptivity\adapt.h">
+      <Filter>adaptivity</Filter>
+    </ClInclude>
+    <ClInclude Include="adaptivity\AdaptiveLinearVariationalSolver.h">
+      <Filter>adaptivity</Filter>
+    </ClInclude>
+    <ClInclude Include="adaptivity\AdaptiveNonlinearVariationalSolver.h">
+      <Filter>adaptivity</Filter>
+    </ClInclude>
+    <ClInclude Include="adaptivity\adaptivesolve.h">
+      <Filter>adaptivity</Filter>
+    </ClInclude>
+    <ClInclude Include="adaptivity\dolfin_adaptivity.h">
+      <Filter>adaptivity</Filter>
+    </ClInclude>
+    <ClInclude Include="adaptivity\ErrorControl.h">
+      <Filter>adaptivity</Filter>
+    </ClInclude>
+    <ClInclude Include="adaptivity\Extrapolation.h">
+      <Filter>adaptivity</Filter>
+    </ClInclude>
+    <ClInclude Include="adaptivity\GenericAdaptiveVariationalSolver.h">
+      <Filter>adaptivity</Filter>
+    </ClInclude>
+    <ClInclude Include="adaptivity\GoalFunctional.h">
+      <Filter>adaptivity</Filter>
+    </ClInclude>
+    <ClInclude Include="adaptivity\marking.h">
+      <Filter>adaptivity</Filter>
+    </ClInclude>
+    <ClInclude Include="adaptivity\TimeSeries.h">
+      <Filter>adaptivity</Filter>
+    </ClInclude>
+    <ClInclude Include="common\timing.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\ArrayView.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\defines.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\dolfin_common.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\dolfin_doc.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Hierarchical.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\IndexSet.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\init.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\MPI.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\NoDeleter.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\RangedIndexSet.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Set.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\SubSystemsManager.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Timer.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\types.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Array.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\UniqueIdGenerator.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\utils.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\Variable.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="common\version.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="examples\navier-stokes\PressureUpdate.h">
+      <Filter>examples\navier-stokes</Filter>
+    </ClInclude>
+    <ClInclude Include="examples\navier-stokes\TentativeVelocity.h">
+      <Filter>examples\navier-stokes</Filter>
+    </ClInclude>
+    <ClInclude Include="examples\navier-stokes\VelocityUpdate.h">
+      <Filter>examples\navier-stokes</Filter>
+    </ClInclude>
+    <ClInclude Include="fem\assemble.h">
+      <Filter>fem</Filter>
+    </ClInclude>
+    <ClInclude Include="fem\BasisFunction.h">
+      <Filter>fem</Filter>
+    </ClInclude>
+    <ClInclude Include="fem\DirichletBC.h">
+      <Filter>fem</Filter>
+    </ClInclude>
+    <ClInclude Include="fem\DiscreteOperators.h">
+      <Filter>fem</Filter>
+    </ClInclude>
+    <ClInclude Include="fem\DofMap.h">
+      <Filter>fem</Filter>
+    </ClInclude>
+    <ClInclude Include="fem\DofMapBuilder.h">
+      <Filter>fem</Filter>
+    </ClInclude>
+    <ClInclude Include="fem\dolfin_fem.h">
+      <Filter>fem</Filter>
+    </ClInclude>
+    <ClInclude Include="fem\Equation.h">
+      <Filter>fem</Filter>
+    </ClInclude>
+    <ClInclude Include="fem\fem_utils.h">
+      <Filter>fem</Filter>
+    </ClInclude>
+    <ClInclude Include="fem\FiniteElement.h">
+      <Filter>fem</Filter>
+    </ClInclude>
+    <ClInclude Include="fem\Form.h">
+      <Filter>fem</Filter>
+    </ClInclude>
+    <ClInclude Include="fem\GenericDofMap.h">
+      <Filter>fem</Filter>
+    </ClInclude>
+    <ClInclude Include="fem\LinearTimeDependentProblem.h">
+      <Filter>fem</Filter>
+    </ClInclude>
+    <ClInclude Include="fem\LinearVariationalProblem.h">
+      <Filter>fem</Filter>
+    </ClInclude>
+    <ClInclude Include="fem\LinearVariationalSolver.h">
+      <Filter>fem</Filter>
+    </ClInclude>
+    <ClInclude Include="fem\LocalAssembler.h">
+      <Filter>fem</Filter>
+    </ClInclude>
+    <ClInclude Include="fem\LocalSolver.h">
+      <Filter>fem</Filter>
+    </ClInclude>
+    <ClInclude Include="fem\MixedAssembler.h">
+      <Filter>fem</Filter>
+    </ClInclude>
+    <ClInclude Include="fem\MixedLinearVariationalProblem.h">
+      <Filter>fem</Filter>
+    </ClInclude>
+    <ClInclude Include="fem\MixedLinearVariationalSolver.h">
+      <Filter>fem</Filter>
+    </ClInclude>
+    <ClInclude Include="fem\MixedNonlinearVariationalProblem.h">
+      <Filter>fem</Filter>
+    </ClInclude>
+    <ClInclude Include="fem\MixedNonlinearVariationalSolver.h">
+      <Filter>fem</Filter>
+    </ClInclude>
+    <ClInclude Include="fem\MultiMeshAssembler.h">
+      <Filter>fem</Filter>
+    </ClInclude>
+    <ClInclude Include="fem\MultiMeshDirichletBC.h">
+      <Filter>fem</Filter>
+    </ClInclude>
+    <ClInclude Include="fem\MultiMeshDofMap.h">
+      <Filter>fem</Filter>
+    </ClInclude>
+    <ClInclude Include="fem\MultiMeshForm.h">
+      <Filter>fem</Filter>
+    </ClInclude>
+    <ClInclude Include="fem\NonlinearVariationalProblem.h">
+      <Filter>fem</Filter>
+    </ClInclude>
+    <ClInclude Include="fem\NonlinearVariationalSolver.h">
+      <Filter>fem</Filter>
+    </ClInclude>
+    <ClInclude Include="fem\PETScDMCollection.h">
+      <Filter>fem</Filter>
+    </ClInclude>
+    <ClInclude Include="fem\PointSource.h">
+      <Filter>fem</Filter>
+    </ClInclude>
+    <ClInclude Include="fem\solve.h">
+      <Filter>fem</Filter>
+    </ClInclude>
+    <ClInclude Include="fem\SparsityPatternBuilder.h">
+      <Filter>fem</Filter>
+    </ClInclude>
+    <ClInclude Include="fem\SystemAssembler.h">
+      <Filter>fem</Filter>
+    </ClInclude>
+    <ClInclude Include="fem\UFC.h">
+      <Filter>fem</Filter>
+    </ClInclude>
+    <ClInclude Include="la\solve.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="fem\assemble_local.h">
+      <Filter>fem</Filter>
+    </ClInclude>
+    <ClInclude Include="fem\Assembler.h">
+      <Filter>fem</Filter>
+    </ClInclude>
+    <ClInclude Include="fem\AssemblerBase.h">
+      <Filter>fem</Filter>
+    </ClInclude>
+    <ClInclude Include="ffc\Poisson1D.h">
+      <Filter>ffc</Filter>
+    </ClInclude>
+    <ClInclude Include="ffc\Poisson2D.h">
+      <Filter>ffc</Filter>
+    </ClInclude>
+    <ClInclude Include="ffc\Poisson3D.h">
+      <Filter>ffc</Filter>
+    </ClInclude>
+    <ClInclude Include="common\constants.h">
+      <Filter>common</Filter>
+    </ClInclude>
+    <ClInclude Include="function\assign.h">
+      <Filter>function</Filter>
+    </ClInclude>
+    <ClInclude Include="function\CoefficientAssigner.h">
+      <Filter>function</Filter>
+    </ClInclude>
+    <ClInclude Include="function\Constant.h">
+      <Filter>function</Filter>
+    </ClInclude>
+    <ClInclude Include="function\dolfin_function.h">
+      <Filter>function</Filter>
+    </ClInclude>
+    <ClInclude Include="function\Expression.h">
+      <Filter>function</Filter>
+    </ClInclude>
+    <ClInclude Include="function\FunctionAssigner.h">
+      <Filter>function</Filter>
+    </ClInclude>
+    <ClInclude Include="function\FunctionAXPY.h">
+      <Filter>function</Filter>
+    </ClInclude>
+    <ClInclude Include="function\FunctionSpace.h">
+      <Filter>function</Filter>
+    </ClInclude>
+    <ClInclude Include="function\GenericFunction.h">
+      <Filter>function</Filter>
+    </ClInclude>
+    <ClInclude Include="function\LagrangeInterpolator.h">
+      <Filter>function</Filter>
+    </ClInclude>
+    <ClInclude Include="function\MultiMeshCoefficientAssigner.h">
+      <Filter>function</Filter>
+    </ClInclude>
+    <ClInclude Include="function\MultiMeshFunction.h">
+      <Filter>function</Filter>
+    </ClInclude>
+    <ClInclude Include="function\MultiMeshFunctionSpace.h">
+      <Filter>function</Filter>
+    </ClInclude>
+    <ClInclude Include="function\SpecialFacetFunction.h">
+      <Filter>function</Filter>
+    </ClInclude>
+    <ClInclude Include="function\Function.h">
+      <Filter>function</Filter>
+    </ClInclude>
+    <ClInclude Include="function\MultiMeshSubSpace.h">
+      <Filter>function</Filter>
+    </ClInclude>
+    <ClInclude Include="function\SpecialFunctions.h">
+      <Filter>function</Filter>
+    </ClInclude>
+    <ClInclude Include="generation\BoxMesh.h">
+      <Filter>generation</Filter>
+    </ClInclude>
+    <ClInclude Include="generation\dolfin_generation.h">
+      <Filter>generation</Filter>
+    </ClInclude>
+    <ClInclude Include="generation\IntervalMesh.h">
+      <Filter>generation</Filter>
+    </ClInclude>
+    <ClInclude Include="generation\RectangleMesh.h">
+      <Filter>generation</Filter>
+    </ClInclude>
+    <ClInclude Include="generation\SphericalShellMesh.h">
+      <Filter>generation</Filter>
+    </ClInclude>
+    <ClInclude Include="generation\UnitCubeMesh.h">
+      <Filter>generation</Filter>
+    </ClInclude>
+    <ClInclude Include="generation\UnitIntervalMesh.h">
+      <Filter>generation</Filter>
+    </ClInclude>
+    <ClInclude Include="generation\UnitTetrahedronMesh.h">
+      <Filter>generation</Filter>
+    </ClInclude>
+    <ClInclude Include="generation\UnitTriangleMesh.h">
+      <Filter>generation</Filter>
+    </ClInclude>
+    <ClInclude Include="generation\UnitDiscMesh.h">
+      <Filter>generation</Filter>
+    </ClInclude>
+    <ClInclude Include="generation\UnitSquareMesh.h">
+      <Filter>generation</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry\BoundingBoxTree.h">
+      <Filter>geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry\BoundingBoxTree1D.h">
+      <Filter>geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry\BoundingBoxTree2D.h">
+      <Filter>geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry\BoundingBoxTree3D.h">
+      <Filter>geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry\CGALExactArithmetic.h">
+      <Filter>geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry\CollisionPredicates.h">
+      <Filter>geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry\ConvexTriangulation.h">
+      <Filter>geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry\dolfin_geometry.h">
+      <Filter>geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry\GenericBoundingBoxTree.h">
+      <Filter>geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry\GeometryDebugging.h">
+      <Filter>geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry\GeometryPredicates.h">
+      <Filter>geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry\GeometryTools.h">
+      <Filter>geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry\intersect.h">
+      <Filter>geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry\IntersectionConstruction.h">
+      <Filter>geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry\MeshPointIntersection.h">
+      <Filter>geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry\Point.h">
+      <Filter>geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry\predicates.h">
+      <Filter>geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry\SimplexQuadrature.h">
+      <Filter>geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="graph\BoostGraphColoring.h">
+      <Filter>graph</Filter>
+    </ClInclude>
+    <ClInclude Include="graph\BoostGraphOrdering.h">
+      <Filter>graph</Filter>
+    </ClInclude>
+    <ClInclude Include="graph\CSRGraph.h">
+      <Filter>graph</Filter>
+    </ClInclude>
+    <ClInclude Include="graph\dolfin_graph.h">
+      <Filter>graph</Filter>
+    </ClInclude>
+    <ClInclude Include="graph\Graph.h">
+      <Filter>graph</Filter>
+    </ClInclude>
+    <ClInclude Include="graph\GraphBuilder.h">
+      <Filter>graph</Filter>
+    </ClInclude>
+    <ClInclude Include="graph\GraphColoring.h">
+      <Filter>graph</Filter>
+    </ClInclude>
+    <ClInclude Include="graph\ParMETIS.h">
+      <Filter>graph</Filter>
+    </ClInclude>
+    <ClInclude Include="graph\SCOTCH.h">
+      <Filter>graph</Filter>
+    </ClInclude>
+    <ClInclude Include="graph\ZoltanInterface.h">
+      <Filter>graph</Filter>
+    </ClInclude>
+    <ClInclude Include="io\base64.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\dolfin_io.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\Encoder.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\File.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\GenericFile.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\HDF5File.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\HDF5Interface.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\HDF5Utility.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\HDF5Attribute.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\pugiconfig.hpp">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\pugixml.hpp">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\RAWFile.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\SVGFile.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\VTKFile.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\VTKWriter.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\X3DFile.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\X3DOM.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\XDMFFile.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\XMLArray.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\XMLFile.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\XMLTable.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\XMLFunctionData.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\XMLMeshFunction.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\XMLMesh.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\XMLMeshValueCollection.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\XMLParameters.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\xmlutils.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\XMLVector.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="io\XYZFile.h">
+      <Filter>io</Filter>
+    </ClInclude>
+    <ClInclude Include="la\Amesos2LUSolver.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\BelosKrylovSolver.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\BlockMatrix.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\BlockVector.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\CoordinateMatrix.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\DefaultFactory.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\dolfin_la.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\EigenFactory.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\EigenKrylovSolver.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\EigenLUSolver.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\EigenMatrix.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\EigenVector.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\GenericLinearAlgebraFactory.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\GenericLinearOperator.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\GenericLinearSolver.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\GenericMatrix.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\GenericTensor.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\GenericVector.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\Ifpack2Preconditioner.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\IndexMap.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\KrylovSolver.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\LinearAlgebraObject.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\LinearOperator.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\LinearSolver.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\LUSolver.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\Matrix.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\MueluPreconditioner.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\PETScBaseMatrix.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\PETScFactory.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\PETScKrylovSolver.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\PETScLinearOperator.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\PETScLUSolver.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\PETScMatrix.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\PETScNestMatrix.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\PETScObject.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\PETScOptions.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\PETScPreconditioner.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\PETScVector.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\Scalar.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\SLEPcEigenSolver.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\SparsityPattern.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\SUNDIALSNVector.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\TensorLayout.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\test_nullspace.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\TpetraFactory.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\TpetraMatrix.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\TpetraVector.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\TrilinosParameters.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\TrilinosPreconditioner.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\Vector.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="la\VectorSpaceBasis.h">
+      <Filter>la</Filter>
+    </ClInclude>
+    <ClInclude Include="log\dolfin_log.h">
+      <Filter>log</Filter>
+    </ClInclude>
+    <ClInclude Include="log\Event.h">
+      <Filter>log</Filter>
+    </ClInclude>
+    <ClInclude Include="log\log.h">
+      <Filter>log</Filter>
+    </ClInclude>
+    <ClInclude Include="log\Logger.h">
+      <Filter>log</Filter>
+    </ClInclude>
+    <ClInclude Include="log\LogLevel.h">
+      <Filter>log</Filter>
+    </ClInclude>
+    <ClInclude Include="log\LogManager.h">
+      <Filter>log</Filter>
+    </ClInclude>
+    <ClInclude Include="log\LogStream.h">
+      <Filter>log</Filter>
+    </ClInclude>
+    <ClInclude Include="log\Progress.h">
+      <Filter>log</Filter>
+    </ClInclude>
+    <ClInclude Include="log\Table.h">
+      <Filter>log</Filter>
+    </ClInclude>
+    <ClInclude Include="math\basic.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="math\dolfin_math.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="math\Lagrange.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="math\Legendre.h">
+      <Filter>math</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\BoundaryComputation.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\BoundaryMesh.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\Cell.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\CellType.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\DistributedMeshTools.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\dolfin_mesh.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\DomainBoundary.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\DynamicMeshEditor.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\Edge.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\Face.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\Facet.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\FacetCell.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\HexahedronCell.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\IntervalCell.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\LocalMeshData.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\LocalMeshValueCollection.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\Mesh.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\MeshColoring.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\MeshConnectivity.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\MeshData.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\MeshDomains.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\MeshEditor.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\MeshEntity.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\MeshEntityIterator.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\MeshEntityIteratorBase.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\MeshFunction.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\MeshGeometry.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\MeshHierarchy.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\MeshOrdering.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\MeshPartitioning.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\MeshQuality.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\MeshRelation.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\MeshRenumbering.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\MeshSmoothing.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\MeshTopology.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\MeshTransformation.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\MeshValueCollection.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\MeshView.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\MultiMesh.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\PeriodicBoundaryComputation.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\PointCell.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\QuadrilateralCell.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\SubDomain.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\SubMesh.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\SubsetIterator.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\TetrahedronCell.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\TopologyComputation.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\TriangleCell.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="mesh\Vertex.h">
+      <Filter>mesh</Filter>
+    </ClInclude>
+    <ClInclude Include="multistage\dolfin_multistage.h">
+      <Filter>multistage</Filter>
+    </ClInclude>
+    <ClInclude Include="multistage\MultiStageScheme.h">
+      <Filter>multistage</Filter>
+    </ClInclude>
+    <ClInclude Include="multistage\PointIntegralSolver.h">
+      <Filter>multistage</Filter>
+    </ClInclude>
+    <ClInclude Include="multistage\RKSolver.h">
+      <Filter>multistage</Filter>
+    </ClInclude>
+    <ClInclude Include="nls\dolfin_nls.h">
+      <Filter>nls</Filter>
+    </ClInclude>
+    <ClInclude Include="nls\NewtonSolver.h">
+      <Filter>nls</Filter>
+    </ClInclude>
+    <ClInclude Include="nls\NonlinearProblem.h">
+      <Filter>nls</Filter>
+    </ClInclude>
+    <ClInclude Include="nls\OptimisationProblem.h">
+      <Filter>nls</Filter>
+    </ClInclude>
+    <ClInclude Include="nls\PETScSNESSolver.h">
+      <Filter>nls</Filter>
+    </ClInclude>
+    <ClInclude Include="nls\PETScTAOSolver.h">
+      <Filter>nls</Filter>
+    </ClInclude>
+    <ClInclude Include="nls\TAOLinearBoundSolver.h">
+      <Filter>nls</Filter>
+    </ClInclude>
+    <ClInclude Include="parameter\dolfin_parameter.h">
+      <Filter>parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="parameter\GlobalParameters.h">
+      <Filter>parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="parameter\Parameter.h">
+      <Filter>parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="parameter\Parameters.h">
+      <Filter>parameter</Filter>
+    </ClInclude>
+    <ClInclude Include="refinement\BisectionRefinement1D.h">
+      <Filter>refinement</Filter>
+    </ClInclude>
+    <ClInclude Include="refinement\dolfin_refinement.h">
+      <Filter>refinement</Filter>
+    </ClInclude>
+    <ClInclude Include="refinement\LocalMeshCoarsening.h">
+      <Filter>refinement</Filter>
+    </ClInclude>
+    <ClInclude Include="refinement\ParallelRefinement.h">
+      <Filter>refinement</Filter>
+    </ClInclude>
+    <ClInclude Include="refinement\PlazaRefinementND.h">
+      <Filter>refinement</Filter>
+    </ClInclude>
+    <ClInclude Include="refinement\refine.h">
+      <Filter>refinement</Filter>
+    </ClInclude>
+    <ClInclude Include="refinement\RegularCutRefinement.h">
+      <Filter>refinement</Filter>
+    </ClInclude>
+    <ClInclude Include="ts\CVode.h">
+      <Filter>ts</Filter>
+    </ClInclude>
+    <ClInclude Include="ts\dolfin_ts.h">
+      <Filter>ts</Filter>
+    </ClInclude>
+    <ClInclude Include="examples\neumann-poisson\Poisson.h">
+      <Filter>examples\neumann-poisson</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,725 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <ProjectGuid>{33A97AA3-68EA-44BD-A01A-B948D70DFCC2}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir);C:\boost_1_75_0</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <AdditionalLibraryDirectories>$(SolutionDir)\libs</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <TargetMachine>MachineX86</TargetMachine>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="adaptivity\adapt.cpp" />
+    <ClCompile Include="adaptivity\AdaptiveLinearVariationalSolver.cpp" />
+    <ClCompile Include="adaptivity\AdaptiveNonlinearVariationalSolver.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="adaptivity\adaptivesolve.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="adaptivity\ErrorControl.cpp" />
+    <ClCompile Include="adaptivity\Extrapolation.cpp" />
+    <ClCompile Include="adaptivity\GenericAdaptiveVariationalSolver.cpp" />
+    <ClCompile Include="adaptivity\GoalFunctional.cpp" />
+    <ClCompile Include="adaptivity\marking.cpp" />
+    <ClCompile Include="adaptivity\TimeSeries.cpp" />
+    <ClCompile Include="ale\ALE.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ale\HarmonicSmoothing.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="ale\MeshDisplacement.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="common\defines.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="common\init.cpp" />
+    <ClCompile Include="common\MPI.cpp" />
+    <ClCompile Include="common\SubSystemsManager.cpp" />
+    <ClCompile Include="common\Timer.cpp" />
+    <ClCompile Include="common\timing.cpp" />
+    <ClCompile Include="common\UniqueIdGenerator.cpp" />
+    <ClCompile Include="common\utils.cpp" />
+    <ClCompile Include="common\Variable.cpp" />
+    <ClCompile Include="fem\assemble.cpp" />
+    <ClCompile Include="fem\Assembler.cpp" />
+    <ClCompile Include="fem\AssemblerBase.cpp" />
+    <ClCompile Include="fem\assemble_local.cpp" />
+    <ClCompile Include="fem\DirichletBC.cpp" />
+    <ClCompile Include="fem\DiscreteOperators.cpp" />
+    <ClCompile Include="fem\DofMap.cpp" />
+    <ClCompile Include="fem\DofMapBuilder.cpp" />
+    <ClCompile Include="fem\Equation.cpp" />
+    <ClCompile Include="fem\fem_utils.cpp" />
+    <ClCompile Include="fem\FiniteElement.cpp" />
+    <ClCompile Include="fem\Form.cpp" />
+    <ClCompile Include="fem\LinearTimeDependentProblem.cpp" />
+    <ClCompile Include="fem\LinearVariationalProblem.cpp" />
+    <ClCompile Include="fem\LinearVariationalSolver.cpp" />
+    <ClCompile Include="fem\LocalAssembler.cpp" />
+    <ClCompile Include="fem\LocalSolver.cpp" />
+    <ClCompile Include="fem\MixedAssembler.cpp" />
+    <ClCompile Include="fem\MixedLinearVariationalProblem.cpp" />
+    <ClCompile Include="fem\MixedLinearVariationalSolver.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="fem\MixedNonlinearVariationalProblem.cpp" />
+    <ClCompile Include="fem\MixedNonlinearVariationalSolver.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="fem\MultiMeshAssembler.cpp" />
+    <ClCompile Include="fem\MultiMeshDirichletBC.cpp" />
+    <ClCompile Include="fem\MultiMeshDofMap.cpp" />
+    <ClCompile Include="fem\MultiMeshForm.cpp" />
+    <ClCompile Include="fem\NonlinearVariationalProblem.cpp" />
+    <ClCompile Include="fem\NonlinearVariationalSolver.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="fem\PETScDMCollection.cpp" />
+    <ClCompile Include="fem\PointSource.cpp" />
+    <ClCompile Include="fem\solve.cpp" />
+    <ClCompile Include="fem\SparsityPatternBuilder.cpp" />
+    <ClCompile Include="fem\SystemAssembler.cpp" />
+    <ClCompile Include="fem\UFC.cpp" />
+    <ClCompile Include="function\assign.cpp" />
+    <ClCompile Include="function\CoefficientAssigner.cpp" />
+    <ClCompile Include="function\Constant.cpp" />
+    <ClCompile Include="function\Expression.cpp" />
+    <ClCompile Include="function\Function.cpp" />
+    <ClCompile Include="function\FunctionAssigner.cpp" />
+    <ClCompile Include="function\FunctionAXPY.cpp" />
+    <ClCompile Include="function\FunctionSpace.cpp" />
+    <ClCompile Include="function\GenericFunction.cpp" />
+    <ClCompile Include="function\LagrangeInterpolator.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="function\MultiMeshCoefficientAssigner.cpp" />
+    <ClCompile Include="function\MultiMeshFunction.cpp" />
+    <ClCompile Include="function\MultiMeshFunctionSpace.cpp" />
+    <ClCompile Include="function\MultiMeshSubSpace.cpp" />
+    <ClCompile Include="function\SpecialFacetFunction.cpp" />
+    <ClCompile Include="function\SpecialFunctions.cpp" />
+    <ClCompile Include="generation\BoxMesh.cpp" />
+    <ClCompile Include="generation\IntervalMesh.cpp" />
+    <ClCompile Include="generation\RectangleMesh.cpp" />
+    <ClCompile Include="generation\SphericalShellMesh.cpp" />
+    <ClCompile Include="generation\UnitDiscMesh.cpp" />
+    <ClCompile Include="generation\UnitTetrahedronMesh.cpp" />
+    <ClCompile Include="generation\UnitTriangleMesh.cpp" />
+    <ClCompile Include="geometry\BoundingBoxTree.cpp" />
+    <ClCompile Include="geometry\CollisionPredicates.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="geometry\ConvexTriangulation.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="geometry\GenericBoundingBoxTree.cpp" />
+    <ClCompile Include="geometry\GeometryDebugging.cpp" />
+    <ClCompile Include="geometry\GeometryPredicates.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="geometry\intersect.cpp" />
+    <ClCompile Include="geometry\IntersectionConstruction.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="geometry\MeshPointIntersection.cpp" />
+    <ClCompile Include="geometry\Point.cpp" />
+    <ClCompile Include="geometry\predicates.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="geometry\SimplexQuadrature.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="graph\BoostGraphOrdering.cpp" />
+    <ClCompile Include="graph\GraphBuilder.cpp" />
+    <ClCompile Include="graph\GraphColoring.cpp" />
+    <ClCompile Include="graph\ParMETIS.cpp" />
+    <ClCompile Include="graph\SCOTCH.cpp" />
+    <ClCompile Include="graph\ZoltanInterface.cpp" />
+    <ClCompile Include="io\base64.cpp" />
+    <ClCompile Include="io\File.cpp" />
+    <ClCompile Include="io\GenericFile.cpp" />
+    <ClCompile Include="io\HDF5Attribute.cpp" />
+    <ClCompile Include="io\HDF5File.cpp" />
+    <ClCompile Include="io\HDF5Interface.cpp" />
+    <ClCompile Include="io\HDF5Utility.cpp" />
+    <ClCompile Include="io\pugixml.cpp" />
+    <ClCompile Include="io\RAWFile.cpp" />
+    <ClCompile Include="io\SVGFile.cpp" />
+    <ClCompile Include="io\VTKFile.cpp" />
+    <ClCompile Include="io\VTKWriter.cpp" />
+    <ClCompile Include="io\X3DFile.cpp" />
+    <ClCompile Include="io\X3DOM.cpp" />
+    <ClCompile Include="io\XDMFFile.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="io\XMLFile.cpp" />
+    <ClCompile Include="io\XMLFunctionData.cpp" />
+    <ClCompile Include="io\XMLMesh.cpp" />
+    <ClCompile Include="io\XMLParameters.cpp" />
+    <ClCompile Include="io\XMLTable.cpp" />
+    <ClCompile Include="io\xmlutils.cpp" />
+    <ClCompile Include="io\XMLVector.cpp" />
+    <ClCompile Include="io\XYZFile.cpp" />
+    <ClCompile Include="la\Amesos2LUSolver.cpp" />
+    <ClCompile Include="la\BelosKrylovSolver.cpp" />
+    <ClCompile Include="la\BlockMatrix.cpp" />
+    <ClCompile Include="la\BlockVector.cpp" />
+    <ClCompile Include="la\CoordinateMatrix.cpp" />
+    <ClCompile Include="la\DefaultFactory.cpp" />
+    <ClCompile Include="la\EigenFactory.cpp" />
+    <ClCompile Include="la\EigenKrylovSolver.cpp" />
+    <ClCompile Include="la\EigenLUSolver.cpp" />
+    <ClCompile Include="la\EigenMatrix.cpp" />
+    <ClCompile Include="la\EigenVector.cpp" />
+    <ClCompile Include="la\GenericLinearSolver.cpp" />
+    <ClCompile Include="la\GenericMatrix.cpp" />
+    <ClCompile Include="la\Ifpack2Preconditioner.cpp" />
+    <ClCompile Include="la\IndexMap.cpp" />
+    <ClCompile Include="la\KrylovSolver.cpp" />
+    <ClCompile Include="la\LinearOperator.cpp" />
+    <ClCompile Include="la\LinearSolver.cpp" />
+    <ClCompile Include="la\LUSolver.cpp" />
+    <ClCompile Include="la\MueluPreconditioner.cpp" />
+    <ClCompile Include="la\PETScBaseMatrix.cpp" />
+    <ClCompile Include="la\PETScFactory.cpp" />
+    <ClCompile Include="la\PETScKrylovSolver.cpp" />
+    <ClCompile Include="la\PETScLinearOperator.cpp" />
+    <ClCompile Include="la\PETScLUSolver.cpp" />
+    <ClCompile Include="la\PETScMatrix.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="la\PETScNestMatrix.cpp" />
+    <ClCompile Include="la\PETScObject.cpp" />
+    <ClCompile Include="la\PETScOptions.cpp" />
+    <ClCompile Include="la\PETScPreconditioner.cpp" />
+    <ClCompile Include="la\PETScVector.cpp" />
+    <ClCompile Include="la\SLEPcEigenSolver.cpp" />
+    <ClCompile Include="la\solve.cpp" />
+    <ClCompile Include="la\SparsityPattern.cpp" />
+    <ClCompile Include="la\TensorLayout.cpp" />
+    <ClCompile Include="la\test_nullspace.cpp" />
+    <ClCompile Include="la\TpetraFactory.cpp" />
+    <ClCompile Include="la\TpetraMatrix.cpp" />
+    <ClCompile Include="la\TpetraVector.cpp" />
+    <ClCompile Include="la\TrilinosParameters.cpp" />
+    <ClCompile Include="la\VectorSpaceBasis.cpp" />
+    <ClCompile Include="log\Event.cpp" />
+    <ClCompile Include="log\log.cpp" />
+    <ClCompile Include="log\Logger.cpp" />
+    <ClCompile Include="log\LogManager.cpp" />
+    <ClCompile Include="log\LogStream.cpp" />
+    <ClCompile Include="log\Progress.cpp" />
+    <ClCompile Include="log\Table.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="math\basic.cpp" />
+    <ClCompile Include="math\Lagrange.cpp" />
+    <ClCompile Include="math\Legendre.cpp" />
+    <ClCompile Include="mesh\BoundaryComputation.cpp" />
+    <ClCompile Include="mesh\BoundaryMesh.cpp" />
+    <ClCompile Include="mesh\Cell.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="mesh\CellType.cpp" />
+    <ClCompile Include="mesh\DistributedMeshTools.cpp" />
+    <ClCompile Include="mesh\DynamicMeshEditor.cpp" />
+    <ClCompile Include="mesh\Edge.cpp" />
+    <ClCompile Include="mesh\Face.cpp" />
+    <ClCompile Include="mesh\Facet.cpp" />
+    <ClCompile Include="mesh\FacetCell.cpp" />
+    <ClCompile Include="mesh\HexahedronCell.cpp" />
+    <ClCompile Include="mesh\IntervalCell.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="mesh\LocalMeshData.cpp" />
+    <ClCompile Include="mesh\Mesh.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="mesh\MeshColoring.cpp" />
+    <ClCompile Include="mesh\MeshConnectivity.cpp" />
+    <ClCompile Include="mesh\MeshData.cpp" />
+    <ClCompile Include="mesh\MeshDomains.cpp" />
+    <ClCompile Include="mesh\MeshEditor.cpp" />
+    <ClCompile Include="mesh\MeshEntity.cpp" />
+    <ClCompile Include="mesh\MeshFunction.cpp" />
+    <ClCompile Include="mesh\MeshGeometry.cpp" />
+    <ClCompile Include="mesh\MeshHierarchy.cpp" />
+    <ClCompile Include="mesh\MeshOrdering.cpp" />
+    <ClCompile Include="mesh\MeshPartitioning.cpp" />
+    <ClCompile Include="mesh\MeshQuality.cpp" />
+    <ClCompile Include="mesh\MeshRenumbering.cpp" />
+    <ClCompile Include="mesh\MeshSmoothing.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="mesh\MeshTopology.cpp" />
+    <ClCompile Include="mesh\MeshTransformation.cpp" />
+    <ClCompile Include="mesh\MeshView.cpp" />
+    <ClCompile Include="mesh\MultiMesh.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="mesh\PeriodicBoundaryComputation.cpp" />
+    <ClCompile Include="mesh\PointCell.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="mesh\QuadrilateralCell.cpp" />
+    <ClCompile Include="mesh\SubDomain.cpp" />
+    <ClCompile Include="mesh\SubMesh.cpp" />
+    <ClCompile Include="mesh\TetrahedronCell.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="mesh\TopologyComputation.cpp" />
+    <ClCompile Include="mesh\TriangleCell.cpp" />
+    <ClCompile Include="multistage\MultiStageScheme.cpp" />
+    <ClCompile Include="multistage\PointIntegralSolver.cpp" />
+    <ClCompile Include="multistage\RKSolver.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="nls\NewtonSolver.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="nls\PETScSNESSolver.cpp" />
+    <ClCompile Include="nls\PETScTAOSolver.cpp" />
+    <ClCompile Include="nls\TAOLinearBoundSolver.cpp" />
+    <ClCompile Include="parameter\GlobalParameters.cpp" />
+    <ClCompile Include="parameter\Parameter.cpp" />
+    <ClCompile Include="parameter\Parameters.cpp" />
+    <ClCompile Include="refinement\BisectionRefinement1D.cpp" />
+    <ClCompile Include="refinement\LocalMeshCoarsening.cpp" />
+    <ClCompile Include="refinement\ParallelRefinement.cpp" />
+    <ClCompile Include="refinement\PlazaRefinementND.cpp" />
+    <ClCompile Include="refinement\refine.cpp" />
+    <ClCompile Include="refinement\RegularCutRefinement.cpp" />
+    <ClCompile Include="ts\CVode.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="adaptivity\adapt.h" />
+    <ClInclude Include="adaptivity\AdaptiveLinearVariationalSolver.h" />
+    <ClInclude Include="adaptivity\AdaptiveNonlinearVariationalSolver.h" />
+    <ClInclude Include="adaptivity\adaptivesolve.h" />
+    <ClInclude Include="adaptivity\dolfin_adaptivity.h" />
+    <ClInclude Include="adaptivity\ErrorControl.h" />
+    <ClInclude Include="adaptivity\Extrapolation.h" />
+    <ClInclude Include="adaptivity\GenericAdaptiveVariationalSolver.h" />
+    <ClInclude Include="adaptivity\GoalFunctional.h" />
+    <ClInclude Include="adaptivity\marking.h" />
+    <ClInclude Include="adaptivity\TimeSeries.h" />
+    <ClInclude Include="ale\ALE.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="ale\dolfin_ale.h" />
+    <ClInclude Include="ale\HarmonicSmoothing.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="ale\MeshDisplacement.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="common\Array.h" />
+    <ClInclude Include="common\ArrayView.h" />
+    <ClInclude Include="common\constants.h" />
+    <ClInclude Include="common\defines.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="common\dolfin_common.h" />
+    <ClInclude Include="common\dolfin_doc.h" />
+    <ClInclude Include="common\Hierarchical.h" />
+    <ClInclude Include="common\IndexSet.h" />
+    <ClInclude Include="common\init.h" />
+    <ClInclude Include="common\MPI.h" />
+    <ClInclude Include="common\NoDeleter.h" />
+    <ClInclude Include="common\RangedIndexSet.h" />
+    <ClInclude Include="common\Set.h" />
+    <ClInclude Include="common\SubSystemsManager.h" />
+    <ClInclude Include="common\Timer.h" />
+    <ClInclude Include="common\timing.h" />
+    <ClInclude Include="common\types.h" />
+    <ClInclude Include="common\UniqueIdGenerator.h" />
+    <ClInclude Include="common\utils.h" />
+    <ClInclude Include="common\Variable.h" />
+    <ClInclude Include="common\version.h" />
+    <ClInclude Include="dolfin.h" />
+    <ClInclude Include="examples\navier-stokes\PressureUpdate.h" />
+    <ClInclude Include="examples\navier-stokes\TentativeVelocity.h" />
+    <ClInclude Include="examples\navier-stokes\VelocityUpdate.h" />
+    <ClInclude Include="examples\neumann-poisson\Poisson.h" />
+    <ClInclude Include="fem\assemble.h" />
+    <ClInclude Include="fem\Assembler.h" />
+    <ClInclude Include="fem\AssemblerBase.h" />
+    <ClInclude Include="fem\assemble_local.h" />
+    <ClInclude Include="fem\BasisFunction.h" />
+    <ClInclude Include="fem\DirichletBC.h" />
+    <ClInclude Include="fem\DiscreteOperators.h" />
+    <ClInclude Include="fem\DofMap.h" />
+    <ClInclude Include="fem\DofMapBuilder.h" />
+    <ClInclude Include="fem\dolfin_fem.h" />
+    <ClInclude Include="fem\Equation.h" />
+    <ClInclude Include="fem\fem_utils.h" />
+    <ClInclude Include="fem\FiniteElement.h" />
+    <ClInclude Include="fem\Form.h" />
+    <ClInclude Include="fem\GenericDofMap.h" />
+    <ClInclude Include="fem\LinearTimeDependentProblem.h" />
+    <ClInclude Include="fem\LinearVariationalProblem.h" />
+    <ClInclude Include="fem\LinearVariationalSolver.h" />
+    <ClInclude Include="fem\LocalAssembler.h" />
+    <ClInclude Include="fem\LocalSolver.h" />
+    <ClInclude Include="fem\MixedAssembler.h" />
+    <ClInclude Include="fem\MixedLinearVariationalProblem.h" />
+    <ClInclude Include="fem\MixedLinearVariationalSolver.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="fem\MixedNonlinearVariationalProblem.h" />
+    <ClInclude Include="fem\MixedNonlinearVariationalSolver.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="fem\MultiMeshAssembler.h" />
+    <ClInclude Include="fem\MultiMeshDirichletBC.h" />
+    <ClInclude Include="fem\MultiMeshDofMap.h" />
+    <ClInclude Include="fem\MultiMeshForm.h" />
+    <ClInclude Include="fem\NonlinearVariationalProblem.h" />
+    <ClInclude Include="fem\NonlinearVariationalSolver.h" />
+    <ClInclude Include="fem\PETScDMCollection.h" />
+    <ClInclude Include="fem\PointSource.h" />
+    <ClInclude Include="fem\solve.h" />
+    <ClInclude Include="fem\SparsityPatternBuilder.h" />
+    <ClInclude Include="fem\SystemAssembler.h" />
+    <ClInclude Include="fem\UFC.h" />
+    <ClInclude Include="ffc\Poisson1D.h" />
+    <ClInclude Include="ffc\Poisson2D.h" />
+    <ClInclude Include="ffc\Poisson3D.h" />
+    <ClInclude Include="function\assign.h" />
+    <ClInclude Include="function\CoefficientAssigner.h" />
+    <ClInclude Include="function\Constant.h" />
+    <ClInclude Include="function\dolfin_function.h" />
+    <ClInclude Include="function\Expression.h" />
+    <ClInclude Include="function\Function.h" />
+    <ClInclude Include="function\FunctionAssigner.h" />
+    <ClInclude Include="function\FunctionAXPY.h" />
+    <ClInclude Include="function\FunctionSpace.h" />
+    <ClInclude Include="function\GenericFunction.h" />
+    <ClInclude Include="function\LagrangeInterpolator.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="function\MultiMeshCoefficientAssigner.h" />
+    <ClInclude Include="function\MultiMeshFunction.h" />
+    <ClInclude Include="function\MultiMeshFunctionSpace.h" />
+    <ClInclude Include="function\MultiMeshSubSpace.h" />
+    <ClInclude Include="function\SpecialFacetFunction.h" />
+    <ClInclude Include="function\SpecialFunctions.h" />
+    <ClInclude Include="generation\BoxMesh.h" />
+    <ClInclude Include="generation\dolfin_generation.h" />
+    <ClInclude Include="generation\IntervalMesh.h" />
+    <ClInclude Include="generation\RectangleMesh.h" />
+    <ClInclude Include="generation\SphericalShellMesh.h" />
+    <ClInclude Include="generation\UnitCubeMesh.h" />
+    <ClInclude Include="generation\UnitDiscMesh.h" />
+    <ClInclude Include="generation\UnitIntervalMesh.h" />
+    <ClInclude Include="generation\UnitSquareMesh.h" />
+    <ClInclude Include="generation\UnitTetrahedronMesh.h" />
+    <ClInclude Include="generation\UnitTriangleMesh.h" />
+    <ClInclude Include="geometry\BoundingBoxTree.h" />
+    <ClInclude Include="geometry\BoundingBoxTree1D.h" />
+    <ClInclude Include="geometry\BoundingBoxTree2D.h" />
+    <ClInclude Include="geometry\BoundingBoxTree3D.h" />
+    <ClInclude Include="geometry\CGALExactArithmetic.h" />
+    <ClInclude Include="geometry\CollisionPredicates.h" />
+    <ClInclude Include="geometry\ConvexTriangulation.h" />
+    <ClInclude Include="geometry\dolfin_geometry.h" />
+    <ClInclude Include="geometry\GenericBoundingBoxTree.h" />
+    <ClInclude Include="geometry\GeometryDebugging.h" />
+    <ClInclude Include="geometry\GeometryPredicates.h" />
+    <ClInclude Include="geometry\GeometryTools.h" />
+    <ClInclude Include="geometry\intersect.h" />
+    <ClInclude Include="geometry\IntersectionConstruction.h" />
+    <ClInclude Include="geometry\MeshPointIntersection.h" />
+    <ClInclude Include="geometry\Point.h" />
+    <ClInclude Include="geometry\predicates.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="geometry\SimplexQuadrature.h" />
+    <ClInclude Include="graph\BoostGraphColoring.h" />
+    <ClInclude Include="graph\BoostGraphOrdering.h" />
+    <ClInclude Include="graph\CSRGraph.h" />
+    <ClInclude Include="graph\dolfin_graph.h" />
+    <ClInclude Include="graph\Graph.h" />
+    <ClInclude Include="graph\GraphBuilder.h" />
+    <ClInclude Include="graph\GraphColoring.h" />
+    <ClInclude Include="graph\ParMETIS.h" />
+    <ClInclude Include="graph\SCOTCH.h" />
+    <ClInclude Include="graph\ZoltanInterface.h" />
+    <ClInclude Include="io\base64.h" />
+    <ClInclude Include="io\dolfin_io.h" />
+    <ClInclude Include="io\Encoder.h" />
+    <ClInclude Include="io\File.h" />
+    <ClInclude Include="io\GenericFile.h" />
+    <ClInclude Include="io\HDF5Attribute.h" />
+    <ClInclude Include="io\HDF5File.h" />
+    <ClInclude Include="io\HDF5Interface.h" />
+    <ClInclude Include="io\HDF5Utility.h" />
+    <ClInclude Include="io\pugiconfig.hpp" />
+    <ClInclude Include="io\pugixml.hpp" />
+    <ClInclude Include="io\RAWFile.h" />
+    <ClInclude Include="io\SVGFile.h" />
+    <ClInclude Include="io\VTKFile.h" />
+    <ClInclude Include="io\VTKWriter.h" />
+    <ClInclude Include="io\X3DFile.h" />
+    <ClInclude Include="io\X3DOM.h" />
+    <ClInclude Include="io\XDMFFile.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="io\XMLArray.h" />
+    <ClInclude Include="io\XMLFile.h" />
+    <ClInclude Include="io\XMLFunctionData.h" />
+    <ClInclude Include="io\XMLMesh.h" />
+    <ClInclude Include="io\XMLMeshFunction.h" />
+    <ClInclude Include="io\XMLMeshValueCollection.h" />
+    <ClInclude Include="io\XMLParameters.h" />
+    <ClInclude Include="io\XMLTable.h" />
+    <ClInclude Include="io\xmlutils.h" />
+    <ClInclude Include="io\XMLVector.h" />
+    <ClInclude Include="io\XYZFile.h" />
+    <ClInclude Include="la\Amesos2LUSolver.h" />
+    <ClInclude Include="la\BelosKrylovSolver.h" />
+    <ClInclude Include="la\BlockMatrix.h" />
+    <ClInclude Include="la\BlockVector.h" />
+    <ClInclude Include="la\CoordinateMatrix.h" />
+    <ClInclude Include="la\DefaultFactory.h" />
+    <ClInclude Include="la\dolfin_la.h" />
+    <ClInclude Include="la\EigenFactory.h" />
+    <ClInclude Include="la\EigenKrylovSolver.h" />
+    <ClInclude Include="la\EigenLUSolver.h" />
+    <ClInclude Include="la\EigenMatrix.h" />
+    <ClInclude Include="la\EigenVector.h" />
+    <ClInclude Include="la\GenericLinearAlgebraFactory.h" />
+    <ClInclude Include="la\GenericLinearOperator.h" />
+    <ClInclude Include="la\GenericLinearSolver.h" />
+    <ClInclude Include="la\GenericMatrix.h" />
+    <ClInclude Include="la\GenericTensor.h" />
+    <ClInclude Include="la\GenericVector.h" />
+    <ClInclude Include="la\Ifpack2Preconditioner.h" />
+    <ClInclude Include="la\IndexMap.h" />
+    <ClInclude Include="la\KrylovSolver.h" />
+    <ClInclude Include="la\LinearAlgebraObject.h" />
+    <ClInclude Include="la\LinearOperator.h" />
+    <ClInclude Include="la\LinearSolver.h" />
+    <ClInclude Include="la\LUSolver.h" />
+    <ClInclude Include="la\Matrix.h" />
+    <ClInclude Include="la\MueluPreconditioner.h" />
+    <ClInclude Include="la\PETScBaseMatrix.h" />
+    <ClInclude Include="la\PETScFactory.h" />
+    <ClInclude Include="la\PETScKrylovSolver.h" />
+    <ClInclude Include="la\PETScLinearOperator.h" />
+    <ClInclude Include="la\PETScLUSolver.h" />
+    <ClInclude Include="la\PETScMatrix.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="la\PETScNestMatrix.h" />
+    <ClInclude Include="la\PETScObject.h" />
+    <ClInclude Include="la\PETScOptions.h" />
+    <ClInclude Include="la\PETScPreconditioner.h" />
+    <ClInclude Include="la\PETScVector.h" />
+    <ClInclude Include="la\Scalar.h" />
+    <ClInclude Include="la\SLEPcEigenSolver.h" />
+    <ClInclude Include="la\solve.h" />
+    <ClInclude Include="la\SparsityPattern.h" />
+    <ClInclude Include="la\SUNDIALSNVector.h" />
+    <ClInclude Include="la\TensorLayout.h" />
+    <ClInclude Include="la\test_nullspace.h" />
+    <ClInclude Include="la\TpetraFactory.h" />
+    <ClInclude Include="la\TpetraMatrix.h" />
+    <ClInclude Include="la\TpetraVector.h" />
+    <ClInclude Include="la\TrilinosParameters.h" />
+    <ClInclude Include="la\TrilinosPreconditioner.h" />
+    <ClInclude Include="la\Vector.h" />
+    <ClInclude Include="la\VectorSpaceBasis.h" />
+    <ClInclude Include="log\dolfin_log.h" />
+    <ClInclude Include="log\Event.h" />
+    <ClInclude Include="log\log.h" />
+    <ClInclude Include="log\Logger.h" />
+    <ClInclude Include="log\LogLevel.h" />
+    <ClInclude Include="log\LogManager.h" />
+    <ClInclude Include="log\LogStream.h" />
+    <ClInclude Include="log\Progress.h" />
+    <ClInclude Include="log\Table.h" />
+    <ClInclude Include="math\basic.h" />
+    <ClInclude Include="math\dolfin_math.h" />
+    <ClInclude Include="math\Lagrange.h" />
+    <ClInclude Include="math\Legendre.h" />
+    <ClInclude Include="mesh\BoundaryComputation.h" />
+    <ClInclude Include="mesh\BoundaryMesh.h" />
+    <ClInclude Include="mesh\Cell.h" />
+    <ClInclude Include="mesh\CellType.h" />
+    <ClInclude Include="mesh\DistributedMeshTools.h" />
+    <ClInclude Include="mesh\dolfin_mesh.h" />
+    <ClInclude Include="mesh\DomainBoundary.h" />
+    <ClInclude Include="mesh\DynamicMeshEditor.h" />
+    <ClInclude Include="mesh\Edge.h" />
+    <ClInclude Include="mesh\Face.h" />
+    <ClInclude Include="mesh\Facet.h" />
+    <ClInclude Include="mesh\FacetCell.h" />
+    <ClInclude Include="mesh\HexahedronCell.h" />
+    <ClInclude Include="mesh\IntervalCell.h" />
+    <ClInclude Include="mesh\LocalMeshData.h" />
+    <ClInclude Include="mesh\LocalMeshValueCollection.h" />
+    <ClInclude Include="mesh\Mesh.h" />
+    <ClInclude Include="mesh\MeshColoring.h" />
+    <ClInclude Include="mesh\MeshConnectivity.h" />
+    <ClInclude Include="mesh\MeshData.h" />
+    <ClInclude Include="mesh\MeshDomains.h" />
+    <ClInclude Include="mesh\MeshEditor.h" />
+    <ClInclude Include="mesh\MeshEntity.h" />
+    <ClInclude Include="mesh\MeshEntityIterator.h" />
+    <ClInclude Include="mesh\MeshEntityIteratorBase.h" />
+    <ClInclude Include="mesh\MeshFunction.h" />
+    <ClInclude Include="mesh\MeshGeometry.h" />
+    <ClInclude Include="mesh\MeshHierarchy.h" />
+    <ClInclude Include="mesh\MeshOrdering.h" />
+    <ClInclude Include="mesh\MeshPartitioning.h" />
+    <ClInclude Include="mesh\MeshQuality.h" />
+    <ClInclude Include="mesh\MeshRelation.h" />
+    <ClInclude Include="mesh\MeshRenumbering.h" />
+    <ClInclude Include="mesh\MeshSmoothing.h" />
+    <ClInclude Include="mesh\MeshTopology.h" />
+    <ClInclude Include="mesh\MeshTransformation.h" />
+    <ClInclude Include="mesh\MeshValueCollection.h" />
+    <ClInclude Include="mesh\MeshView.h" />
+    <ClInclude Include="mesh\MultiMesh.h" />
+    <ClInclude Include="mesh\PeriodicBoundaryComputation.h" />
+    <ClInclude Include="mesh\PointCell.h" />
+    <ClInclude Include="mesh\QuadrilateralCell.h" />
+    <ClInclude Include="mesh\SubDomain.h" />
+    <ClInclude Include="mesh\SubMesh.h" />
+    <ClInclude Include="mesh\SubsetIterator.h" />
+    <ClInclude Include="mesh\TetrahedronCell.h" />
+    <ClInclude Include="mesh\TopologyComputation.h" />
+    <ClInclude Include="mesh\TriangleCell.h" />
+    <ClInclude Include="mesh\Vertex.h" />
+    <ClInclude Include="multistage\dolfin_multistage.h" />
+    <ClInclude Include="multistage\MultiStageScheme.h" />
+    <ClInclude Include="multistage\PointIntegralSolver.h" />
+    <ClInclude Include="multistage\RKSolver.h" />
+    <ClInclude Include="nls\dolfin_nls.h" />
+    <ClInclude Include="nls\NewtonSolver.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="nls\NonlinearProblem.h" />
+    <ClInclude Include="nls\OptimisationProblem.h" />
+    <ClInclude Include="nls\PETScSNESSolver.h" />
+    <ClInclude Include="nls\PETScTAOSolver.h" />
+    <ClInclude Include="nls\TAOLinearBoundSolver.h" />
+    <ClInclude Include="parameter\dolfin_parameter.h" />
+    <ClInclude Include="parameter\GlobalParameters.h" />
+    <ClInclude Include="parameter\Parameter.h" />
+    <ClInclude Include="parameter\Parameters.h" />
+    <ClInclude Include="refinement\BisectionRefinement1D.h" />
+    <ClInclude Include="refinement\dolfin_refinement.h" />
+    <ClInclude Include="refinement\LocalMeshCoarsening.h" />
+    <ClInclude Include="refinement\ParallelRefinement.h" />
+    <ClInclude Include="refinement\PlazaRefinementND.h" />
+    <ClInclude Include="refinement\refine.h" />
+    <ClInclude Include="refinement\RegularCutRefinement.h" />
+    <ClInclude Include="ts\CVode.h" />
+    <ClInclude Include="ts\dolfin_ts.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
