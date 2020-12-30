@@ -81,7 +81,7 @@ namespace dolfin
 
     /// File encoding type
     enum class Encoding {HDF5, ASCII};
-
+ 
     /// Default encoding type
 #ifdef HAS_HDF5
     static const Encoding default_encoding = Encoding::HDF5;

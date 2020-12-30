@@ -32,6 +32,7 @@
 #include "types.h"
 #include "defines.h"
 
+
 //-------------------------------------------------------------------------
 std::string dolfin::dolfin_version()
 {

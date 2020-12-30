@@ -174,8 +174,8 @@ void Logger::dolfin_error(std::string location,
     << std::endl
     << "*** " << "Process: " << _mpi_rank << std::endl
     << "*** " << std::endl
-    << "*** " << "DOLFIN version: " << DOLFIN_VERSION_STRING << std::endl
-    << "*** " << "Git changeset:  " << DOLFIN_VERSION_GIT << std::endl
+    << "*** " << "DOLFIN version: " << dolfin_version << std::endl
+    << "*** " << "Git changeset:  " << git_commit_hash << std::endl
     << "*** "
     << "-------------------------------------------------------------------------"
     << std::endl;
