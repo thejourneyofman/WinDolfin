@@ -180,7 +180,7 @@ PETScLUSolver::PETScLUSolver(MPI_Comm comm,
   if (ierr != 0) PETScObject::petsc_error(ierr, __FILE__, "KSPGetPC");
 
   // Set PC type to LU or PCCHOLESKY (depending on matrix symmetry)
-  if (is_symmetric == PETSC_TRUE and solver_has_cholesky(solver_package))
+  if (is_symmetric == PETSC_TRUE && solver_has_cholesky(solver_package))
   {
     ierr = PCSetType(pc, PCCHOLESKY);
     if (ierr != 0) PETScObject::petsc_error(ierr, __FILE__, "PCSetType");

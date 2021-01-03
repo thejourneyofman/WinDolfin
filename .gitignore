@@ -2,4 +2,5 @@
 .vs/
 lib/
 Debug/
+x64/
 results/

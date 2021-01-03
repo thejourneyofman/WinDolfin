@@ -246,7 +246,7 @@ bool PETScMatrix::empty() const
 {
   auto sizes = PETScBaseMatrix::size();
   dolfin_assert((sizes.first < 1 and sizes.second < 1) or (sizes.first > 0 and sizes.second > 0));
-  return (sizes.first < 1) and (sizes.second < 1);
+  return (sizes.first < 1) && (sizes.second < 1);
 }
 //-----------------------------------------------------------------------------
 void PETScMatrix::get(double* block,

@@ -38,7 +38,7 @@
 #include <petscsys.h>
 
 #include "GenericMatrix.h"
-#include "c.h"
+#include "PETScBaseMatrix.h"
 
 namespace dolfin
 {

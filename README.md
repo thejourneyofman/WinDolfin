@@ -8,6 +8,12 @@ However, following the official guideline, to use it on Windows, either a subsys
 or a Docker for Windows is necessary. And Docker does NOT support "build from source" to make 
 customizations for developers to work with C++ from low-layer. 
 
+### (New)Version 0.1 has key improvements over last commitment on:
+
+#### -- Add the PETsc(3.4.3) support
+#### -- Known Issues of Version 0.1 have been solved
+
+
 ### Official install instructions
 To build FEniCS  (https://fenicsproject.org/olddocs/dolfin/latest/python/installation.html) 
 from source requires many tools and libraries. 
@@ -18,6 +24,7 @@ from source requires many tools and libraries.
 #### -- pkg-config (https://www.freedesktop.org/wiki/Software/pkg-config/)
 #### -- zlib (https://www.zlib.net/)
 #### -- PETsc (https://www.mcs.anl.gov/petsc/)
+#### -- MPI (https://docs.microsoft.com/en-us/message-passing-interface/microsoft-mpi)
 
 FEniCS can be downloaded from <https://github.com/FEniCS/>;
 and the building instructions from source are available at
@@ -41,17 +48,19 @@ and the building instructions from source are available at
 #### -- zlib (1.2.11)
 #### -- Eigen (3.3.9)
 #### -- FFC (latest)
+#### -- PETsc (lastest)
+#### -- MSMPI (10.1.2)
 
 ### Known Issues
 The following Solvers are NOT working yet till PETsc are going to be docked in future work.
-#### -- AdaptiveNonlinearVariationalSolver
-####  -- MixedLinearVariationalSolver
-#### -- MixedNonlinearVariationalSolver
-#### -- NonlinearVariationalSolver
-#### -- NewtonSolvers
+#### -- (solved) AdaptiveNonlinearVariationalSolver
+#### -- (solved) MixedLinearVariationalSolver
+#### -- (solved) MixedNonlinearVariationalSolver
+#### -- (solved) NonlinearVariationalSolver
+#### -- (solved) NewtonSolvers
 
 ### Unsupported
 #### -- HDF5
-#### -- PETsc
+#### -- (solved) PETsc
 
 

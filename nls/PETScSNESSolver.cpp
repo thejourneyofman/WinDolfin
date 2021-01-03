@@ -525,9 +525,9 @@ void PETScSNESSolver::set_linear_solver_parameters()
 
     // Check if a tolerance has been set
     if (krylov_parameters["relative_tolerance"].is_set()
-        or krylov_parameters["absolute_tolerance"].is_set()
-        or krylov_parameters["divergence_limit"].is_set()
-        or krylov_parameters["maximum_iterations"].is_set())
+        || krylov_parameters["absolute_tolerance"].is_set()
+        || krylov_parameters["divergence_limit"].is_set()
+        || krylov_parameters["maximum_iterations"].is_set())
     {
       // Set tolerances
       const double rtol = krylov_parameters["relative_tolerance"].is_set() ? (double)krylov_parameters["relative_tolerance"] : PETSC_DEFAULT;

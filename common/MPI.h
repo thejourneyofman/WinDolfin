@@ -314,6 +314,7 @@ namespace dolfin
   template<> inline MPI_Datatype MPI::mpi_type<unsigned int>() { return MPI_UNSIGNED; }
   template<> inline MPI_Datatype MPI::mpi_type<unsigned long int>() { return MPI_UNSIGNED_LONG; }
   template<> inline MPI_Datatype MPI::mpi_type<long long>() { return MPI_LONG_LONG; }
+  template<> inline MPI_Datatype MPI::mpi_type<std::size_t>() { return MPI_UNSIGNED_LONG_LONG; }
   #endif
   //---------------------------------------------------------------------------
   template<typename T>

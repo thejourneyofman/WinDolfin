@@ -108,8 +108,8 @@ TAOLinearBoundSolver::TAOLinearBoundSolver(const std::string method,
   set_ksp(ksp_type);
 
   // Some preconditioners may lead to errors because not compatible with TAO.
-  if ((pc_type != "default") or (ksp_type != "default")
-      or (method != "default"))
+  if ((pc_type != "default") || (ksp_type != "default")
+      || (method != "default"))
   {
     log(WARNING, "Some preconditioners may be not be applicable to "\
     "TAO solvers and generate errors.");

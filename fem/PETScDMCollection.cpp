@@ -62,7 +62,7 @@ namespace
     }
 
     // Tolerance
-    const double TOL;
+    double TOL;
   };
 
   std::map<std::vector<double>, std::vector<std::size_t>, lt_coordinate>
@@ -441,7 +441,7 @@ std::shared_ptr<PETScMatrix> PETScDMCollection::create_transfer_matrix
     for (unsigned int i = 0; i < npoints; ++i)
     {
       if (id_p[i] != std::numeric_limits<unsigned int>::max()
-          and global_idx_p[i][0] != -1)
+          && global_idx_p[i][0] != -1)
       {
         found_ids.push_back(id_p[i]);
         global_row_indices.insert(global_row_indices.end(),

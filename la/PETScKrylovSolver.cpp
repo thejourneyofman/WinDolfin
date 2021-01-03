@@ -265,7 +265,7 @@ std::size_t PETScKrylovSolver::solve(PETScVector& x, const PETScVector& b,
 
   // Write a message
   const bool report = this->parameters["report"].is_set() ? this->parameters["report"] : false;
-  if (report and dolfin::MPI::rank(this->mpi_comm()) == 0)
+  if (report && dolfin::MPI::rank(this->mpi_comm()) == 0)
   {
     info("Solving linear system of size %ld x %ld (PETSc Krylov solver).", M, N);
   }
@@ -286,9 +286,9 @@ std::size_t PETScKrylovSolver::solve(PETScVector& x, const PETScVector& b,
 
   // Check if a tolerance has been set
   if (parameters["relative_tolerance"].is_set()
-      or parameters["absolute_tolerance"].is_set()
-      or parameters["divergence_limit"].is_set()
-      or parameters["maximum_iterations"].is_set())
+      || parameters["absolute_tolerance"].is_set()
+      || parameters["divergence_limit"].is_set()
+      || parameters["maximum_iterations"].is_set())
   {
     // Set tolerances
     const double rtol = parameters["relative_tolerance"].is_set() ? (double)parameters["relative_tolerance"] : PETSC_DEFAULT;

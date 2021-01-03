@@ -65,27 +65,32 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
-    <LibraryPath>$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
+    <IncludePath>$(SolutionDir)\3rdparties\PETsc\build\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(SolutionDir)\3rdparties\PETsc\build\lib;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>true</LinkIncremental>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <IncludePath>$(SolutionDir)\3rdparties\PETsc\build\include;$(VC_IncludePath);$(WindowsSDK_IncludePath);</IncludePath>
+    <LibraryPath>$(SolutionDir)\3rdparties\PETsc\build\lib;$(SolutionDir)\3rdparties\MSMPI\lib\x64;$(VC_LibraryPath_x64);$(WindowsSDK_LibraryPath_x64)</LibraryPath>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>HAS_PETSC;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
       <WarningLevel>Level3</WarningLevel>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(SolutionDir);C:\boost_1_75_0</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)\3rdparties;$(SolutionDir)\3rdparties\PETsc\include;C:\boost_1_75_0</AdditionalIncludeDirectories>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <TargetMachine>MachineX86</TargetMachine>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <SubSystem>Console</SubSystem>
-      <AdditionalLibraryDirectories>$(SolutionDir)\libs</AdditionalLibraryDirectories>
+      <AdditionalLibraryDirectories>$(SolutionDir)\3rdparties\boost;</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libpetsc.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -103,14 +108,28 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>$(SolutionDir);$(SolutionDir)\3rdparties;$(SolutionDir)\3rdparties\PETsc\include;$(SolutionDir)\3rdparties\MSMPI\include;C:\boost_1_75_0</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>HAS_PETSC;HAS_MPI;</PreprocessorDefinitions>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>$(SolutionDir)\3rdparties\boost;C:\boost_1_75_0\lib;C:\boost_1_75_0\stage\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>libpetsc.lib;msmpi.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="adaptivity\adapt.cpp" />
     <ClCompile Include="adaptivity\AdaptiveLinearVariationalSolver.cpp" />
     <ClCompile Include="adaptivity\AdaptiveNonlinearVariationalSolver.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="adaptivity\adaptivesolve.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="adaptivity\ErrorControl.cpp" />
     <ClCompile Include="adaptivity\Extrapolation.cpp" />
@@ -159,10 +178,12 @@
     <ClCompile Include="fem\MixedLinearVariationalProblem.cpp" />
     <ClCompile Include="fem\MixedLinearVariationalSolver.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="fem\MixedNonlinearVariationalProblem.cpp" />
     <ClCompile Include="fem\MixedNonlinearVariationalSolver.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="fem\MultiMeshAssembler.cpp" />
     <ClCompile Include="fem\MultiMeshDirichletBC.cpp" />
@@ -171,6 +192,7 @@
     <ClCompile Include="fem\NonlinearVariationalProblem.cpp" />
     <ClCompile Include="fem\NonlinearVariationalSolver.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="fem\PETScDMCollection.cpp" />
     <ClCompile Include="fem\PointSource.cpp" />
@@ -370,9 +392,11 @@
     <ClCompile Include="multistage\PointIntegralSolver.cpp" />
     <ClCompile Include="multistage\RKSolver.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="nls\NewtonSolver.cpp">
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="nls\PETScSNESSolver.cpp" />
     <ClCompile Include="nls\PETScTAOSolver.cpp" />
@@ -434,10 +458,10 @@
     <ClInclude Include="common\Variable.h" />
     <ClInclude Include="common\version.h" />
     <ClInclude Include="dolfin.h" />
-    <ClInclude Include="examples\navier-stokes\PressureUpdate.h" />
-    <ClInclude Include="examples\navier-stokes\TentativeVelocity.h" />
-    <ClInclude Include="examples\navier-stokes\VelocityUpdate.h" />
     <ClInclude Include="examples\neumann-poisson\Poisson.h" />
+    <ClInclude Include="examples\neumann-poisson\PressureUpdate.h" />
+    <ClInclude Include="examples\neumann-poisson\TentativeVelocity.h" />
+    <ClInclude Include="examples\neumann-poisson\VelocityUpdate.h" />
     <ClInclude Include="fem\assemble.h" />
     <ClInclude Include="fem\Assembler.h" />
     <ClInclude Include="fem\AssemblerBase.h" />

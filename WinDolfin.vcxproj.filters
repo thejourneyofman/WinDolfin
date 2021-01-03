@@ -66,9 +66,6 @@
       <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
       <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
     </Filter>
-    <Filter Include="examples\navier-stokes">
-      <UniqueIdentifier>{b49e1caa-1f52-4a78-a02a-9b37c21d9704}</UniqueIdentifier>
-    </Filter>
     <Filter Include="function">
       <UniqueIdentifier>{b14e7b4b-6e05-4e0a-b2c5-cda544efa50c}</UniqueIdentifier>
     </Filter>
@@ -878,15 +875,6 @@
     <ClInclude Include="common\version.h">
       <Filter>common</Filter>
     </ClInclude>
-    <ClInclude Include="examples\navier-stokes\PressureUpdate.h">
-      <Filter>examples\navier-stokes</Filter>
-    </ClInclude>
-    <ClInclude Include="examples\navier-stokes\TentativeVelocity.h">
-      <Filter>examples\navier-stokes</Filter>
-    </ClInclude>
-    <ClInclude Include="examples\navier-stokes\VelocityUpdate.h">
-      <Filter>examples\navier-stokes</Filter>
-    </ClInclude>
     <ClInclude Include="fem\assemble.h">
       <Filter>fem</Filter>
     </ClInclude>
@@ -1680,6 +1668,15 @@
       <Filter>ts</Filter>
     </ClInclude>
     <ClInclude Include="examples\neumann-poisson\Poisson.h">
+      <Filter>examples\neumann-poisson</Filter>
+    </ClInclude>
+    <ClInclude Include="examples\neumann-poisson\PressureUpdate.h">
+      <Filter>examples\neumann-poisson</Filter>
+    </ClInclude>
+    <ClInclude Include="examples\neumann-poisson\TentativeVelocity.h">
+      <Filter>examples\neumann-poisson</Filter>
+    </ClInclude>
+    <ClInclude Include="examples\neumann-poisson\VelocityUpdate.h">
       <Filter>examples\neumann-poisson</Filter>
     </ClInclude>
   </ItemGroup>
