@@ -23,6 +23,8 @@
 // First added:  2005-10-23
 // Last changed: 2020-01-24
 
+#ifdef HAS_PETSC
+
 #include <cmath>
 #include <string>
 
@@ -347,3 +349,5 @@ void NewtonSolver::update_solution(GenericVector& x, const GenericVector& dx,
     x.axpy(-relaxation_parameter, dx);
 }
 //-----------------------------------------------------------------------------
+
+#endif

@@ -21,6 +21,8 @@
 // First added:  2011-01-14 (2008-12-26 as VariationalProblem.cpp)
 // Last changed: 2013-11-21
 
+#ifdef HAS_PETSC
+
 #include <common/NoDeleter.h>
 #include <fem/DirichletBC.h>
 #include <la/GenericVector.h>
@@ -203,3 +205,4 @@ NonlinearVariationalSolver::NonlinearDiscreteProblem::J(GenericMatrix& A,
     info(A, true);
 }
 //-----------------------------------------------------------------------------
+#endif

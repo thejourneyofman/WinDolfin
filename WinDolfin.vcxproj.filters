@@ -1670,15 +1670,6 @@
     <ClInclude Include="examples\neumann-poisson\Poisson.h">
       <Filter>examples\neumann-poisson</Filter>
     </ClInclude>
-    <ClInclude Include="examples\neumann-poisson\PressureUpdate.h">
-      <Filter>examples\neumann-poisson</Filter>
-    </ClInclude>
-    <ClInclude Include="examples\neumann-poisson\TentativeVelocity.h">
-      <Filter>examples\neumann-poisson</Filter>
-    </ClInclude>
-    <ClInclude Include="examples\neumann-poisson\VelocityUpdate.h">
-      <Filter>examples\neumann-poisson</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />

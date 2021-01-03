@@ -18,6 +18,8 @@
 // First added:  2011-06-30
 // Last changed: 2012-11-12
 
+#ifdef HAS_PETSC
+
 #include <fem/Equation.h>
 #include <fem/Form.h>
 #include <fem/LinearVariationalProblem.h>
@@ -117,3 +119,4 @@ void dolfin::solve(const Equation& equation, Function& u,
   solver.solve(tol);
 }
 //-----------------------------------------------------------------------------
+#endif

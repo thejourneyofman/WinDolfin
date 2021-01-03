@@ -20,6 +20,8 @@
 // First added:  2018-10-03
 // Last changed: 2018-10-03
 
+#ifdef HAS_PETSC
+
 #include <common/NoDeleter.h>
 #include <function/Function.h>
 #include <function/FunctionSpace.h>
@@ -322,3 +324,5 @@ MixedNonlinearDiscreteProblem::J(GenericMatrix& A, const GenericVector& x)
   as_type<PETScMatrix>(A).set_nest(petsc_mats);
   as_type<PETScMatrix>(A).apply("insert");
 }
+
+#endif

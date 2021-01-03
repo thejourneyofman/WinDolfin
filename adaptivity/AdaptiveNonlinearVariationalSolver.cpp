@@ -21,6 +21,8 @@
 // First added:  2010-08-19
 // Last changed: 2012-11-14
 
+#ifdef HAS_PETSC
+
 #include <common/NoDeleter.h>
 #include <fem/NonlinearVariationalProblem.h>
 #include <fem/NonlinearVariationalSolver.h>
@@ -118,3 +120,4 @@ std::size_t AdaptiveNonlinearVariationalSolver::num_dofs_primal()
   return V.dim();
 }
 // ----------------------------------------------------------------------------
+#endif

@@ -18,6 +18,8 @@
 // First added:  2013-02-15
 // Last changed: 2014-03-05
 
+#ifdef HAS_PETSC
+
 #include <cmath>
 
 #include <log/log.h>
@@ -137,3 +139,4 @@ void RKSolver::step_interval(double t0, double t1, double dt)
   }
 }
 //-----------------------------------------------------------------------------
+#endif

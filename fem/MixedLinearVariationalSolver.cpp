@@ -21,6 +21,8 @@
 // First added:  2017-07-21
 // Last changed: 2017-07-21
 
+#ifdef HAS_PETSC
+
 #include <common/NoDeleter.h>
 #include <function/Function.h>
 #include <function/FunctionSpace.h>
@@ -327,3 +329,5 @@ void MixedLinearVariationalSolver::solve(MixedLinearVariationalSolver::assembled
 #endif
   end();
 }
+
+#endif
