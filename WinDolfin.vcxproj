@@ -36,7 +36,7 @@
     <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
@@ -290,7 +290,9 @@
     <ClCompile Include="la\GenericMatrix.cpp" />
     <ClCompile Include="la\Ifpack2Preconditioner.cpp" />
     <ClCompile Include="la\IndexMap.cpp" />
-    <ClCompile Include="la\KrylovSolver.cpp" />
+    <ClCompile Include="la\KrylovSolver.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="la\LinearOperator.cpp" />
     <ClCompile Include="la\LinearSolver.cpp" />
     <ClCompile Include="la\LUSolver.cpp" />
@@ -727,6 +729,7 @@
     <ClInclude Include="ts\dolfin_ts.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include=".gitignore" />
     <None Include="README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

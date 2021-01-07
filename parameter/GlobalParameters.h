@@ -72,7 +72,7 @@ namespace dolfin
       p.add("relative_line_width", 0.025);
 
       // Print the level of thread support provided by the MPI library
-      p.add("print_mpi_thread_support_level", false);
+      p.add("print_mpi_thread_support_level", true);
 
       //-- dof ordering
 

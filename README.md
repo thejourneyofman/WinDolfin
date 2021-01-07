@@ -10,7 +10,9 @@ customizations for developers to work with C++ from low-layer.
 
 ### (New)Key improvements over last commitment:
 
-#### -- Added PETsc(3.4.3) support for Win64 
+#### -- Changed build type to a static lib
+#### -- Added PETsc(3.4.3) support for Win64
+#### -- Added MSMPI(10.1.2) support
 #### -- Known Issues have been solved
 
 
@@ -24,6 +26,7 @@ from source requires many tools and libraries.
 #### -- pkg-config (https://www.freedesktop.org/wiki/Software/pkg-config/)
 #### -- zlib (https://www.zlib.net/)
 #### -- PETsc (https://www.mcs.anl.gov/petsc/)
+#### -- MSMPI (https://docs.microsoft.com/en-us/message-passing-interface/microsoft-mpi)
 
 FEniCS can be downloaded from <https://github.com/FEniCS/>;
 and the building instructions from source are available at
@@ -41,6 +44,7 @@ and the building instructions from source are available at
 #### -- Microsoft .NET Framework (4.8.03752)
 #### -- ISO C++17 Standard (/std:c++17)
 #### -- boost (1.75.0)
+#### -- MSMPI (10.1.2) 64 bit
 
 ### Packages Integrated
 #### -- Dolfin ("2019.2.0.dev0" )

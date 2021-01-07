@@ -4,3 +4,6 @@ lib/
 Debug/
 x64/
 results/
+tests/x64/
+tests/Debug/
+tests/.vs/

@@ -1,4 +1,4 @@
-// Copyright (C) 2010 Marie E. Rognes
+﻿// Copyright (C) 2010 Marie E. Rognes
 //
 // This file is part of DOLFIN.
 //
@@ -71,7 +71,7 @@ int main()
 {
     // Create mesh and function space
     auto mesh = std::make_shared<Mesh>(
-        UnitSquareMesh::create({ {64, 64} }, CellType::Type::quadrilateral));
+        UnitSquareMesh::create({ {16, 16} }, CellType::Type::quadrilateral));
     auto V = std::make_shared<Poisson::FunctionSpace>(mesh);
 
     // Define variational problem
